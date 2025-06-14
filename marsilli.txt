@@ -1,0 +1,50 @@
+#include <SoftwareSerial.h>
+SoftwareSerial mySerial(10,11);
+int pul=4;
+void setup() 
+{
+  pinMode(pul, INPUT);
+  Serial.begin(9600);
+  mySerial.begin(9600);
+}
+
+void loop()
+{
+  if (digitalRead(pul)==HIGH){
+    Serial.println("ON");
+    mySerial.write(1);
+  }
+    else{
+      Serial.println("OFF");
+      mySerial.write(2);
+  }
+  delay(500);
+}
+
+
+
+
+
+
+#include <SoftwareSerial.h>
+SoftwareSerial mySerial (10,11);
+void setup()
+{
+  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
+  mySerial.begin(9600);
+}
+void loop()
+{
+  if(mySerial.available()){
+    int dato = mySerial.read();
+    Serial.println(dato);
+    if (dato==1){
+      digitalWrite(LED_BUILTIN, HIGH);
+    }
+    else if(dato == 2){
+      digitalWrite(LED_BUILTIN, LOW);
+    }
+  delay(500); // Wait for 1000 millisecond(s)
+  }
+}

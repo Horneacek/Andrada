@@ -1,0 +1,237 @@
+int dis[]={3,4,5,6,7,8,9};
+int T=200;
+int cout=0;
+int pul=2;
+int pulR=12;
+void setup(){
+  for (int i=0; i<7; i++){
+    pinMode(dis[i],OUTPUT);
+    digitalWrite(dis[i],LOW);
+  }}
+  
+  void loop(){
+	
+  }
+
+
+  void loop(){
+    if (digitalRead(pul)==1){
+    	cout++;
+      	delay(300);
+    }
+    if (digitalRead(pulR)==1){
+    	cout--;
+      	delay(300);
+    }
+    switch(cout){
+    	case 0:
+      		CERO();
+      		break;
+      	case 1:
+      		UNO();
+      		break;
+      	case 2:
+      		DOS();
+      		break;
+      	case 3:
+      		TRES();
+      		break;
+      	case 4:
+      		CUATRO();
+      		break;
+      	case 5:
+      		CINCO();
+      		break;
+      	case 6:
+      		SEIS();
+      		break;
+      	case 7:
+      		SIETE();
+      		break;
+      	case 8:
+      		OCHO();
+      		break;
+      	case 9:
+      		NUEVE();
+      		break;
+      	case 0xA:
+      		A();
+      		break;
+      	case 0xB :
+      		B();
+      		break;
+      	case 0xC:
+      		C();
+      		break;
+      	case 0xD:
+      		D();
+      		break;
+      	case 0xE:
+      		E();
+      		break;
+      	case 0xF:
+      		EFE();
+      		break;
+      	default:
+      		cout=0;
+    }}
+void CERO(){
+  int cero[]={1,1,1,1,1,1,0};
+  for(int i=0; i<7; i++){
+    if (cero[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void UNO(){
+  int uno[]={0,1,1,0,0,0,0};
+  for(int i=0; i<7; i++){
+    if (uno[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void DOS(){
+  int dos[]={1,1,0,1,1,0,1};
+  for(int i=0; i<7; i++){
+    if (dos[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void TRES(){
+  int tres[]={1,1,1,1,0,0,1};
+  for(int i=0; i<7; i++){
+    if (tres[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void CUATRO(){
+  int cuatro[]={0,1,1,0,0,1,1};
+  for(int i=0; i<7; i++){
+    if (cuatro[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void CINCO(){
+  int cinco[]={1,0,1,1,0,1,1};
+  for(int i=0; i<7; i++){
+    if (cinco[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void SEIS(){
+  int seis[]={1,0,1,1,1,1,1};
+  for(int i=0; i<7; i++){
+    if (seis[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void SIETE(){
+  int siete[]={1,1,1,0,0,0,0};
+  for(int i=0; i<7; i++){
+    if (siete[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void OCHO(){
+  int ocho[]={1,1,1,1,1,1,1};
+  for(int i=0; i<7; i++){
+    if (ocho[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void NUEVE(){
+  int nueve[]={1,1,1,0,0,1,1};
+  for(int i=0; i<7; i++){
+    if (nueve[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void A(){
+  int a[]={1,1,1,0,1,1,1};
+  for(int i=0; i<7; i++){
+    if (a[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void B(){
+  int b[]={0,0,1,1,1,1,1};
+  for(int i=0; i<7; i++){
+    if (b[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void C(){
+  int c[]={1,0,0,1,1,1,0};
+  for(int i=0; i<7; i++){
+    if (c[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void D(){
+  int d[]={0,1,1,1,1,0,1};
+  for(int i=0; i<7; i++){
+    if (d[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void E(){
+  int e[]={1,0,0,1,1,1,1};
+  for(int i=0; i<7; i++){
+    if (e[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
+void EFE(){
+  int efe[]={1,0,0,0,1,1,1};
+  for(int i=0; i<7; i++){
+    if (efe[i]==1){
+      digitalWrite(dis[i],HIGH);}
+    else{
+      digitalWrite(dis[i],LOW);
+    }
+  }  
+}
